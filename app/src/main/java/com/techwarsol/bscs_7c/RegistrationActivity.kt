@@ -35,6 +35,12 @@ class RegistrationActivity : AppCompatActivity() {
         setDOBPicker()
         setSpinnerData()
 
+        binding.txtMoveLogin.setOnClickListener {
+            val intent =
+                Intent(this@RegistrationActivity, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnSignUP.setOnClickListener {
 
             binding.pbLoader.visibility = View.VISIBLE
